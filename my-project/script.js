@@ -48,12 +48,38 @@ let arrayTwo = [1,2,3,4,5,6,7,8,9]
 // foreach
 function getCat(name){
 
+  let catArray = ['ginger', 'junior', 'chicken']
+
+  catArray.forEach((value, index, array) => {
+    console.log('xxx')
+    console.log(value)
+
+    if(!name){
+      console.log(index % 2 == 0)
+    }
+
+
+  })
+
 }
 
-let catArray = ['ginger', 'junior', 'chicken']
+getCat()
 
-catArray.forEach((value, index, array) => {
-  console.log('xxx')
-  console.log(value)
+// Challange
 
-})
+// arr of numbers
+let arr = [1,2,3,4,5,6,7,8,9,10]
+
+function challangeidk(arrV){
+
+  let x = 0
+
+  for(let number of arrV){
+    x += number
+  }
+
+  return x
+}
+
+console.log(challangeidk(arr))
+
