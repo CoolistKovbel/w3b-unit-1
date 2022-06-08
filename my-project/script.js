@@ -29,7 +29,9 @@ console.log(arrOne)
 // Make an array
 let arrayTwo = [1,2,3,4,5,6,7,8,9]
 // loop through array
-for(let i =0; i <= arrayTwo.length - 1; i++){
+for(let i =0; i <= arrayTwo.length; i++){
+
+  // if(arrayTwo[i] % 2 == 0) console.log()
 
   if(arrayTwo[i] % 2){
     // Log number if its equal to the number
