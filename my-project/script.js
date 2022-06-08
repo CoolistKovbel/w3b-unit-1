@@ -46,40 +46,66 @@ let arrayTwo = [1,2,3,4,5,6,7,8,9]
 // }
 
 // foreach
-function getCat(name){
 
-  let catArray = ['ginger', 'junior', 'chicken']
+let catArray = ['ginger', 'junior', 'chicken']
+
+function getCat(name,letter){
+
 
   catArray.forEach((value, index, array) => {
     console.log('xxx')
     console.log(value)
 
     if(!name){
-      console.log(index % 2 == 0)
+      console.log('You need a name')
     }
 
 
+
+    console.log('cats', catArray)
+    console.log('array', array)
+
   })
+
 
 }
 
-getCat()
+getCat('murko','h')
 
 // Challange
 
 // arr of numbers
-let arr = [1,2,3,4,5,6,7,8,9,10]
+// let arr = [1,2,3,4,5,6,7,8,9,10]
 
-function challangeidk(arrV){
+// function challangeidk(arrV){
 
-  let x = 0
+//   let x = 0
 
-  for(let number of arrV){
-    x += number
+//   for(let number of arrV){
+//     x += number
+//   }
+
+//   return x
+// }
+
+// console.log(challangeidk(arr))
+
+
+let arr = ['loremIpsum','asdasdeg','dsdafevv', 'csdasas4', 'loremIpsum5','bboremIpsum6']
+let letter = 'e'
+let returnedValue = filterWords(arr, letter)
+console.log(returnedValue)
+
+function filterWords(array, letter) {
+
+  const filterWords = []
+
+  for(let word of array){
+    if(word < letter){
+      filterWords.push(word)
+    }
   }
 
-  return x
+  return filterWords
+
 }
-
-console.log(challangeidk(arr))
-
