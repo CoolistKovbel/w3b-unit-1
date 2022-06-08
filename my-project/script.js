@@ -29,16 +29,31 @@ console.log(arrOne)
 // Make an array
 let arrayTwo = [1,2,3,4,5,6,7,8,9]
 // loop through array
-for(let i =0; i <= arrayTwo.length; i++){
 
-  // if(arrayTwo[i] % 2 == 0) console.log()
+// for loop
 
-  if(arrayTwo[i] % 2){
-    // Log number if its equal to the number
-    console.log(`The number ${i} is even.`)
-  } else{
-    console.log(`The number ${i} is odd`)
-  }
+// for(let i =0; i <= arrayTwo.length; i++){
+
+//   // if(arrayTwo[i] % 2 == 0) console.log()
+
+//   if(arrayTwo[i] % 2){
+//     // Log number if its equal to the number
+//     console.log(`The number ${i} is even.`)
+//   } else{
+//     console.log(`The number ${i} is odd`)
+//   }
+
+// }
+
+// foreach
+function getCat(name){
 
 }
 
+let catArray = ['ginger', 'junior', 'chicken']
+
+catArray.forEach((value, index, array) => {
+  console.log('xxx')
+  console.log(value)
+
+})
