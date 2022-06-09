@@ -29,11 +29,25 @@ const places = [
 // looping
 const naCitties = []
 
-for(let i = 0; i <places.length; i++){
+// Challange
+// Add a neighborhood key to each object as you loop
 
-  if(places[i].region == 'North America') {
-    naCitties.push(places[i])
-  }
+
+for(let i = 0; i <places.length; i++){
+  // Random Key
+  const deKey = Math.floor(Math.random() * places.length)
+
+  places[i].neghborhoodKey = deKey
+
+  if(places[i].region === 'North America') naCitties.push(places[i])
 }
 
+console.log(places)
 console.log(naCitties)
+
+
+
+
+
+
+
