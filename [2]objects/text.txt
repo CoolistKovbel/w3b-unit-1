@@ -1,0 +1,4 @@
+# what is an object
+its like an individual item key-value pairs where an array is a list of individual items
+
+
