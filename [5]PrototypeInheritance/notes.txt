@@ -1,0 +1,61 @@
+"This" Keyword
+
+~window binding~ : You bind the context to the window
+"this" is the global object
+
+~implicit binding~
+dot syntax where the left side of the dot is an object and is "this" and the right side of the is the key name
+
+~explict binding~
+youre using JS methods to bind properties/values to give "this" object/context
+.call() - gives the context of an obj to the function you're invoking
+.bind() - we save an invokable function
+.apply() - useful for hooking up varibales to built in functions
+
+~new binding~
+most common outside dot binding used to invoke a class or prototype
+**its like a template creator**
+function Dog(props){
+  this.name = props.name;
+  this.noise = props.noise;
+}
+const dog1 = new Dog({name: 'Lilly', noise: 'barkbarkbark'})
+
+
+Prototypes
+a way of organzing your code into a structure
+comprised of a constructor function and prototype object
+2 steps to create a prototype
+4 steps to implement inheritance
+
+constructor function
+
+function AnimalWithObj(props){
+  this.species = props.species
+  this.diet = props.diet
+}
+function AnimalWithStrings(species, diet){
+  this.species = species
+  this.diet = diet
+}
+
+creating prototype methods
+const awo1 = new AnimalWithObj({
+  species: "Home sapiens",
+  diet: 'omnivore'
+})
+const aws1 = new AnimalWithStrings("Home sapiens",'omnivore')
+
+Inheritance
+you can inherit from "older" generation
+
+function Mamamal(props){
+  AnimalWithObj.call(this, props); <-- calls the object with the props
+  this.hairType = props.hairType;
+  this.parenting = props.parenting;
+}
+
+const mamamal1 = new Mamamal({ species: value, diet: value, hairType: value, parenting: value})
+
+To add a prototype together - get inheritance
+Mammal.prototype = Object.create(AnimalWithObj.prototype);
