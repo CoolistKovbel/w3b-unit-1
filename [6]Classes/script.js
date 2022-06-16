@@ -2,55 +2,86 @@
 // Make a contructor function give it some prototype methods
 // 3 props on the contructor at least 2 methods
 
-function basicZombie(props) {
-  this.speed = props.speed;
-  this.strength = props.strength;
-  this.agility = props.agility
-}
+// function basicZombie(props) {
+//   this.speed = props.speed;
+//   this.strength = props.strength;
+//   this.agility = props.agility
+// }
 
-basicZombie.prototype.attack = function () {
-  return `This zombie did an attack of ${this.strength}`
-}
+// basicZombie.prototype.attack = function () {
+//   return `This zombie did an attack of ${this.strength}`
+// }
 
-basicZombie.prototype.stats = function() {
-  return `This zombie has an strength of ${this.strength}, speed of ${this.speed}, agility of ${this.agility}`
-}
+// basicZombie.prototype.stats = function() {
+//   return `This zombie has an strength of ${this.strength}, speed of ${this.speed}, agility of ${this.agility}`
+// }
 
-let pete = new basicZombie({
-  speed: 100,
-  strength: 100,
-  agility: 100
-})
+// let pete = new basicZombie({
+//   speed: 100,
+//   strength: 100,
+//   agility: 100
+// })
 
 // BreakOut
 // inherit from first prototype to create a second prototype
 // at least 1 unique property and method
 
-function AlphaZombie(props) {
-  basicZombie.call(this, props)
-  this.featureAttack = props.featureAttack
-  this.name = props.name
+// function AlphaZombie(props) {
+//   basicZombie.call(this, props)
+//   this.featureAttack = props.featureAttack
+//   this.name = props.name
+// }
+
+
+// AlphaZombie.prototype = Object.create(basicZombie.prototype)
+
+// let jered = new AlphaZombie({
+//   speed: 200,
+//   strength: 1000,
+//   agility: 200,
+//   featureAttack: 'Skull crusher',
+//   name: 'jered'
+// })
+
+// console.log(jered.stats())
+
+// AlphaZombie.prototype.usedAttack = function (){
+//   return `${this.name} used ${this.featureAttack}`
+// }
+
+
+// console.log(jered.usedAttack())
+
+// out to create a class
+
+class ZombieClass{
+  constructor(props){
+  this.speed = props.speed;
+  this.strength = props.strength;
+  this.agility = props.agility
+  }
+
+  attack(){
+    return `This zombies attacked with ${this.strength} power`
+  }
+
+  status(){
+    return `This zombie has an strength of ${this.strength}, speed of ${this.speed}, agility of ${this.agility}`
+  }
+
 }
 
-
-AlphaZombie.prototype = Object.create(basicZombie.prototype)
-
-let jered = new AlphaZombie({
-  speed: 200,
-  strength: 1000,
-  agility: 200,
-  featureAttack: 'Skull crusher',
-  name: 'jered'
+let james = new ZombieClass({
+  speed: 100,
+  strength: 9000,
+  agility: 100
 })
 
-console.log(jered.stats())
-
-AlphaZombie.prototype.usedAttack = function (){
-  return `${this.name} used ${this.featureAttack}`
-}
+console.log(james)
+console.log(james.attack())
+console.log(james.status())
 
 
-console.log(jered.usedAttack())
 
 // Class Work
 // function Grandpa(props) {
@@ -121,4 +152,4 @@ const grandpa2 = new GrandpaClass({
   age: 100
 })
 
-
+console.log(grandpa2)
