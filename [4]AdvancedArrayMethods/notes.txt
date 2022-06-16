@@ -1,0 +1,23 @@
+Advanced Array Methods
+
+When you write a function its good if only one thing is going on. If a lot of things are going on in a function then it can create bugs.
+
+highier order function is a function that takes another function as a paramerter
+a callback function is the function used as a paramerter
+
+
+** the forEach loop doesnt return anything.
+
+map
+returns a new Array
+built in loop
+runs a cb function on ever index
+
+filter
+returns a new Array
+had a built in loop iritates over Array
+performs a check returns true
+
+reduce
+returns a single value squishing an array to one value
+accumulator is out bucker where we're keeping track of the final tally

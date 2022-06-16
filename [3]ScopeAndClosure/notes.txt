@@ -1,0 +1,7 @@
+FunctionScope: Variables inside the Function
+BlockScope: variables inside if else statements
+
+Purpose of scope is to restrict access to code we done need at the time.
+
+var is function scoped;
+let and const are blockscoped
