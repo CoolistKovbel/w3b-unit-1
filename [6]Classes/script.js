@@ -59,27 +59,58 @@ class ZombieClass{
   this.speed = props.speed;
   this.strength = props.strength;
   this.agility = props.agility
+  this.name = props.name
   }
 
   attack(){
-    return `This zombies attacked with ${this.strength} power`
+    return `${this.name} attacked with ${this.strength} power`
   }
 
   status(){
-    return `This zombie has an strength of ${this.strength}, speed of ${this.speed}, agility of ${this.agility}`
+    return `${this.name} has an strength of ${this.strength}, speed of ${this.speed}, agility of ${this.agility}`
   }
 
 }
 
-let james = new ZombieClass({
+
+class AlphaZombieClass extends ZombieClass {
+
+  constructor(props){
+    super(props)
+    this.superAttack = props.superAttack
+  }
+
+  useAttack(recipient) {
+    return `${this.name} used ${this.superAttack} on ${recipient}`
+  }
+
+}
+
+let darren = new ZombieClass({
   speed: 100,
   strength: 9000,
-  agility: 100
+  agility: 100,
+  name: "darren"
 })
 
-console.log(james)
-console.log(james.attack())
+
+let james = new AlphaZombieClass({
+  speed: 100,
+  strength: 9000,
+  agility: 100,
+  name: "james",
+  superAttack: 'Super Smash'
+})
+
 console.log(james.status())
+
+function attackRecipient(obj) {
+  console.log(obj)
+  return james.useAttack(obj.name)
+}
+
+console.log(attackRecipient(darren))
+
 
 
 
@@ -146,10 +177,28 @@ class GrandpaClass {
 
 }
 
-const grandpa2 = new GrandpaClass({
-  firstName: 'Joe',
-  lastName: 'Boby',
-  age: 100
+
+// extends access to the grandpa methods
+// replaces the Object.create()
+class FatherClass extends GrandpaClass {
+  constructor(props){
+    // Gives access to the properties from the inharitor class
+    super(props);
+    this.job = props.job
+  }
+  work(){
+    return `${this.firstName} is a ${this.job}`
+  }
+}
+
+const father2 = new FatherClass({
+  firstName: 'Sean',
+  lastName: 'Jones',
+  age: 33,
+  job: 'banker'
 })
 
-console.log(grandpa2)
+console.log(father2)
+console.log(father2.introduce())
+console.log(father2.gift())
+console.log(father2.work())
