@@ -6,26 +6,51 @@
 
 
 // Constructor
-function Car(props){
-  this.color = props.color;
-  this.engine = props.engine;
-  this.wheels = props.wheels;
+function ZombieObj(props){
+  this.power = props.power;
+  this.agility = props.agility
+  this.defense = props.defense
 }
 
-// Prototype One
-const coolCar = new Car({
-  color: "golden",
-  engine: 'hydoponic solar engine',
-  wheels: 'floaties wheels v8'
+// Prototype method One
+ZombieObj.prototype.attack = function() {
+  return `Zombie destroys with ${this.power}`
+}
+
+
+// // Prototype method Two
+ZombieObj.prototype.intro = function(){
+  return `This zombie has the power over ${this.power}, is fast as ${this.agility}, tougher as ${this.defense}`
+}
+
+console.log(ZombieObj.prototype)
+
+// invoke
+const jj = new ZombieObj({
+  power: 9000,
+  agility: 10,
+  defense: 1000,
 })
 
-// Prototype Two
-const basicCar = new Car({
-  color: "silver",
-  engine: "basic engine",
-  wheels: "basic wheels"
-})
+console.log(jj)
+console.log(jj.attack())
+console.log(jj.intro())
 
 // Create a second prototype that inherits from the first
 // Should have at least 2 properties and 1 prototype
+
+
+function JuniorZombie(props) {
+  ZombieObj.call(this, props)
+  this.name = props.name
+}
+
+JuniorZombie.prototype = Object.create(ZombieObj)
+
+console.log(new JuniorZombie({
+  power: 900,
+  agility: 1,
+  defense: 10,
+  name: 'karol'
+}))
 
