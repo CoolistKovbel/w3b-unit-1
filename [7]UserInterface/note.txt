@@ -1,0 +1,22 @@
+userInterface
+
+HTML - house
+CSS - style
+
+Practice on code signal to practice
+
+- content
+Semantic HTML: gives meaning to our HTML
+-> Header,Footer,Main,NAV,Section
+
+- structure
+presentation HTML: split up space, apply styles
+-> div
+
+
+MDNCSS very good resources
+Google how to use certain tags.
+
+Block: takes up designated space
+inline: takes amount of space needed.
+inline-block: they will share a link but also take up the amount of space you want.

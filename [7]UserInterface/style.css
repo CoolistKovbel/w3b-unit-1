@@ -1,0 +1,35 @@
+
+/* Wil only apply to only one container */
+#container {
+  background-color: green;
+  height: 777px;
+  width: 777px;
+}
+/* If you are going to use a style more than once make it a class, its reusable */
+.box{
+  display: inline-block;
+  border: 1px solid black;
+  background-color: darkblue;
+  width: 250px;
+  height: 250px;
+}
+
+.classic-post{
+  width: 600px;
+  height: 400px;
+  background-color: dodgerblue;
+  color: #f4f4f4;
+}
+.classic-post-content{
+  background-color: gold;
+  width: 500px;
+  height: 200px;
+}
+.classic-post-footer {
+  background-color: firebrick;
+  width: 500px;
+  height: 100px;
+}
+p{
+  padding: 0px;
+}
